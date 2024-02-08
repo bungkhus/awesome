@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     private lazy var byLabel = UILabel().then {
-        $0.text = "by Muhammad Khusnan"
+        $0.text = "by: Muhammad Khusnan"
     }
     
     private lazy var stackView = UIStackView().then {
