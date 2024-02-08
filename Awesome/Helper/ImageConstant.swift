@@ -5,15 +5,13 @@
 //  Created by Lion Parcel on 08/02/24.
 //
 
-import UIKit
-
-extension UIImage {
+extension String {
     
-    static let back = UIImage(named: "arrow")
-    static let emptyStar = UIImage(named: "star")
-    static let filledStar = UIImage(named: "star-2")
-    static let ironMan = UIImage(named: "avenger_ironman")
-    static let hulk = UIImage(named: "avenger_hulk")
-    static let superMan = UIImage(named: "superman")
+    static let back = "arrow"
+    static let emptyStar = "star"
+    static let filledStar = "star-2"
+    static let ironMan = "avenger_ironman"
+    static let hulk = "avenger_hulk"
+    static let superMan = "superman"
     
 }

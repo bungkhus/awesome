@@ -23,6 +23,13 @@ class HomeViewController: UIViewController {
         configureView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.getStorageData()
+        tableView.reloadData()        
+    }
+    
     private func configureView() {
         self.title = "Avengers"
         self.view.backgroundColor = .white        
@@ -31,8 +38,6 @@ class HomeViewController: UIViewController {
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
-        
-        self.tableView.reloadData()
     }
 
 }
@@ -56,8 +61,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let detailVC = DetailViewController(with: model)
         
         detailVC.onUpdateStar = { [weak self] star in
-            self?.viewModel.listData[indexPath.row].star = star
-            self?.tableView.reloadData()
+            self?.viewModel.listData[indexPath.row].star = star.rawValue
+            self?.viewModel.updateStorageData()
         }
         
         self.push(to: detailVC)

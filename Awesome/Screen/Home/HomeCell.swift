@@ -77,9 +77,9 @@ class HomeCell: UITableViewCell {
     private func updateUI() {
         guard let model = self.model else { return }
         
-        avengerImageView.image = model.image
+        avengerImageView.image = UIImage(named: model.image)
         nameLabel.text = model.name
-        starLabel.text = model.star.rawValue
+        starLabel.text = model.star
     }
 
 }
