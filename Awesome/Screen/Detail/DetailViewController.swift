@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
     
     private lazy var vStackView = UIStackView().then {
         $0.axis = .vertical
-        $0.alignment = .leading
+        $0.alignment = .center
         $0.spacing = 20
     }
     
